@@ -24,4 +24,6 @@ public class PalabraViewModel extends AndroidViewModel {
     public void insert(Palabra palabra) {
         mPalabraRepository.insert(palabra);
     }
+
+    public void delete (Palabra palabra) { mPalabraRepository.delete(palabra); }
 }
