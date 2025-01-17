@@ -23,18 +23,5 @@ public class NuevaPalabra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nueva_palabra);
         mEditWordView = findViewById(R.id.edit_word);
-
-        final Button button = findViewById(R.id.button_save);
-        button.setOnClickListener(view -> {
-            Intent replyIntent = new Intent();
-            if (TextUtils.isEmpty(mEditWordView.getText())) {
-                setResult(RESULT_CANCELED, replyIntent);
-            } else {
-                String word = mEditWordView.getText().toString();
-                replyIntent.putExtra(EXTRA_REPLY, word);
-                setResult(RESULT_OK, replyIntent);
-            }
-            finish();
-        });
     }
 }
